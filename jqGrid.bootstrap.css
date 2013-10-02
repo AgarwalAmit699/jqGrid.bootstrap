@@ -60,10 +60,14 @@
     border-top-color: inherit !important; 
     border-top-style: ridge !important 
 }
-.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {  
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {  
     background: #dadada;
-    border-collapse: separate; 
+    border-collapse: separate;
 }
+.ui-widget-header .ui-state-hover {
+	
+}
+
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { 
     border: 1px solid #aaaaaa; 
     background: #ffffff; 
@@ -75,14 +79,14 @@
 }
 .ui-jqgrid .ui-pg-selbox {
     display: block;
-    font-size: 0.8em;
+    font-size: 1em;
     height: 25px;
     line-height: 18px;
     margin: 0;
-    width: 100px;
+    width: auto;
 }
 .ui-jqgrid .ui-pager-control {
-    height: 50px;
+    height: 25px;
     position: relative;
 }
 .ui-pg-table .navtable .ui-corner-all{
@@ -90,6 +94,7 @@
 }
 .ui-jqgrid .ui-pg-button:hover {
     padding: 1px;
+    border: 0px;
 }
 .ui-jqgrid .loading {
     position: absolute; 
