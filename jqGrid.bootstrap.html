@@ -65,19 +65,28 @@
                     rowList: [10,20,30],
                     colNames:['Inv No','Date', 'Client', 'Amount','Tax','Total','Notes'],
                     colModel:[
-                        {name:'id',index:'id', width:60, sorttype:"int",search:true},
-                        {name:'invdate',index:'invdate', width:90, sorttype:"date", formatter:"date"},
-                        {name:'name',index:'name', width:100},
-                        {name:'amount',index:'amount', width:80, align:"right",sorttype:"float", formatter:"number"},
-                        {name:'tax',index:'tax', width:80, align:"right",sorttype:"float"},        
-                        {name:'total',index:'total', width:80,align:"right",sorttype:"float"},        
-                        {name:'note',index:'note', width:100, sortable:false}        
+                        {name:'id',index:'id', editable: true, width:60, sorttype:"int",search:true},
+                        {name:'invdate',index:'invdate', editable: true, width:90, sorttype:"date", formatter:"date"},
+                        {name:'name',index:'name', editable: true, width:100},
+                        {name:'amount',index:'amount', editable: true, width:80, align:"right",sorttype:"float", formatter:"number"},
+                        {name:'tax',index:'tax', editable: true, width:80, align:"right",sorttype:"float"},        
+                        {name:'total',index:'total', editable: true, width:80,align:"right",sorttype:"float"},        
+                        {name:'note',index:'note', editable: true, width:100, sortable:false}        
                     ],
                     pager: "#jqGridPager01",
                     viewrecords: true,
+                    add: true,
+                    edit: true,
+                    addtext: 'Add',
+                    edittext: 'Edit',
                     caption: "Data",
                     hidegrid:false
                 });
+            	
+                jQuery("#jqGrid01").jqGrid('navGrid','#jqGridPager01', 
+                	    {edit:true,add:true,del:true,search:true}, //options 
+                	    {height:200,reloadAfterSubmit:true}
+                );
                 
             	// Setup filters
                 jQuery("#jqGrid01").jqGrid('filterToolbar',{defaultSearch:true,stringResult:true});

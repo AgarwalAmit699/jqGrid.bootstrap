@@ -47,7 +47,7 @@
     background: #F9F9F9;
     border: 1px solid #D3D3D3;               
     line-height: 15px;
-    height: 45px;
+    /*height: 45px;*/
     font-weight: bold;
     color: #777777;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
@@ -64,10 +64,6 @@
     background: #dadada;
     border-collapse: separate;
 }
-.ui-widget-header .ui-state-hover {
-	
-}
-
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { 
     border: 1px solid #aaaaaa; 
     background: #ffffff; 
@@ -86,7 +82,10 @@
     width: auto;
 }
 .ui-jqgrid .ui-pager-control {
-    height: 25px;
+    position: relative;
+}
+.ui-jqgrid .ui-jqgrid-pager {
+    height: 32px;
     position: relative;
 }
 .ui-pg-table .navtable .ui-corner-all{
@@ -115,4 +114,7 @@
 	height: 10px;
 	width: auto;
 	display: inline;	
+}
+.ui-jqgrid-pager {
+	height: 32px;	
 }
