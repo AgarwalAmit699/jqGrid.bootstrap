@@ -43,7 +43,7 @@
     border: 1px solid #CCCCCC;
     border-radius: 0px;                
 }                       
-.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {    
     background: #F9F9F9;
     border: 1px solid #D3D3D3;               
     line-height: 15px;
@@ -51,6 +51,9 @@
     font-weight: bold;
     color: #777777;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.ui-widget-content {
+	box-sizing: content-box;
 }
 .ui-icon-triangle-1-n {
     background-position: 1px -16px;
@@ -114,6 +117,7 @@
 	height: 10px;
 	width: auto;
 	display: inline;	
+	padding: 10px 12px;
 }
 .ui-jqgrid-pager {
 	height: 32px;	
