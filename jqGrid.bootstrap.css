@@ -1,3 +1,6 @@
+.ui-jqgrid{
+    -moz-box-sizing: content-box;
+}
 .ui-jqgrid-btable{
 	border-collapse: separate;
 }
@@ -48,7 +51,6 @@
     background: #F9F9F9;
     border: 1px solid #D3D3D3;               
     line-height: 15px;
-    /*height: 45px;*/
     font-weight: bold;
     color: #777777;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
