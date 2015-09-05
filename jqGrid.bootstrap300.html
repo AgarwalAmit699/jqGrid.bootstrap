@@ -13,8 +13,6 @@
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-<!-- <script src="jqGrid/js/jquery-1.9.0.min.js"></script>    -->
-<!-- <script src="jquery-ui/js/jquery-ui-1.9.2.custom.min"></script>  -->
 
 <!-- jqGrid -->
 <script src="jqGrid/js/i18n/grid.locale-en.js"></script>
@@ -22,9 +20,9 @@
 
 <!-- jqGrid setup -->
 <script>
-            
+
         $(document).ready(function() {
-        
+
         	// Set data
             var mydata = [
                 {id:"1",invdate:"2010-05-24",name:"test",note:"note",tax:"10.00",total:"2111.00"} ,
@@ -69,9 +67,9 @@
                     {name:'invdate',index:'invdate', editable: true, width:90, sorttype:"date", formatter:"date"},
                     {name:'name',index:'name', editable: true, width:100},
                     {name:'amount',index:'amount', editable: true, width:80, align:"right",sorttype:"float", formatter:"number"},
-                    {name:'tax',index:'tax', editable: true, width:80, align:"right",sorttype:"float"},        
-                    {name:'total',index:'total', editable: true, width:80,align:"right",sorttype:"float"},        
-                    {name:'note',index:'note', editable: true, width:100, sortable:false}        
+                    {name:'tax',index:'tax', editable: true, width:80, align:"right",sorttype:"float"},
+                    {name:'total',index:'total', editable: true, width:80,align:"right",sorttype:"float"},
+                    {name:'note',index:'note', editable: true, width:100, sortable:false}
                 ],
                 pager: "#jqGridPager01",
                 viewrecords: true,
@@ -82,66 +80,61 @@
                 caption: "Data",
                 hidegrid:false
             });
-        	
+
         	// Setup buttons
-            jQuery("#jqGrid01").jqGrid('navGrid','#jqGridPager01', 
-            	    {edit:true,add:true,del:true,search:true}, 
+            jQuery("#jqGrid01").jqGrid('navGrid','#jqGridPager01',
+            	    {edit:true,add:true,del:true,search:true},
             	    {height:200,reloadAfterSubmit:true}
             );
-            
+
         	// Setup filters
             jQuery("#jqGrid01").jqGrid('filterToolbar',{defaultSearch:true,stringResult:true});
-            
+
         	// Set grid width to #content
-            $("#jqGrid01").jqGrid('setGridWidth', $("#content").width(), true); 
+            $("#jqGrid01").jqGrid('setGridWidth', $("#content").width(), true);
 
         });
     </script>
 
-	
+
 	<!-- jquery-ui CSS -->
-	<link
-		href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"
-		rel="stylesheet">
-	<!-- <link href="jquery-ui/css/custom-theme/jquery-ui-1.8.22.custom.css" rel="stylesheet">  -->
-	
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+
 	<!-- Bootstrap core CSS -->
-	<link rel="stylesheet"
-		href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-	<!-- <link href="bootstrap/css/bootstrap.css" rel="stylesheet"> -->
-	
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
 	<!-- standard jqGrid CSS -->
 	<link href="jqGrid/css/ui.jqgrid.css" rel="stylesheet" />
-	
+
 	<!-- Custom styles for this template -->
 	<style type="text/css">
-		
+
 	body {
 		padding-top: 30px;
 		padding-bottom: 40px;
 	}
-	
+
 	#content {
-		width: 100%; 
-		height: 100%; 
+		width: 100%;
+		height: 100%;
 	}
-	
+
 	.navbar {
 		margin-bottom: 30px;
 	}
-	
+
 	.jumbotron {
 		font-size: inheret;
 		font-weight: 200;
 		line-height: 1;
 		color: inherit;
-	}	
+	}
 	</style>
-	
+
 	<!-- custom CCS override -->
 	<link href="jqGrid.bootstrap.css" rel="stylesheet" />
-	
-	
+
+
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 	      <script src="../../assets/js/html5shiv.js"></script>
@@ -191,16 +184,16 @@
 		</div>
 
 		<!-- Main component for a primary marketing message or call to action -->
-		<div class="jumbotron"> 
+		<div class="jumbotron">
 			<div class="hero-unit">
-				
-				<div id="content">			
+
+				<div id="content">
 					<table id="jqGrid01"></table>
-					<div id="jqGridPager01"></div>								
-				</div>				
-				
+					<div id="jqGridPager01"></div>
+				</div>
+
 				<br/><br/>
-				
+
 				<form class="form-horizontal" role="form">
 				  <div class="form-group">
 				    <label for="inputEmail1" class="col-lg-2 control-label">Email</label>
@@ -229,9 +222,9 @@
 				    </div>
 				  </div>
 				</form>
-				
+
 			</div>
-			
+
 		</div>
 
 	</div>
